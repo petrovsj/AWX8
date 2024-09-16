@@ -41,11 +41,11 @@
       ansible.builtin.debug:
         msg: "{{ access_rules }}"
 
-     - name: Policy Access Rule By Name
-       zscaler.zpacloud.zpa_policy_access_rule_info:
-         provider: "{{ zpa_cloud }}"
-         name: Rule 1
-       register: access_rule_name
+    - name: Policy Access Rule By Name
+      zscaler.zpacloud.zpa_policy_access_rule_info:
+        provider: "{{ zpa_cloud }}"
+        name: Rule 1
+      register: access_rule_name
 
    # - name: Access Rule By Name
     #  ansible.builtin.debug:
