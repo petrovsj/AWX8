@@ -37,9 +37,9 @@
         provider: "{{ zpa_cloud }}"
       register: access_rules
 
-  #  - name: All Access Rules
-   #   ansible.builtin.debug:
-    #    msg: "{{ access_rules }}"
+    - name: All Access Rules
+      ansible.builtin.debug:
+        msg: "{{ access_rules }}"
 
    # - name: Policy Access Rule By Name
     #  zscaler.zpacloud.zpa_policy_access_rule_info:
