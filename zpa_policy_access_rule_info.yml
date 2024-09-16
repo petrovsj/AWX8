@@ -47,9 +47,9 @@
         name: Test_Ansible_Block_Access_Rule
       register: access_rule_name
 
-   # - name: Access Rule By Name
-    #  ansible.builtin.debug:
-     #   msg: "{{ access_rule_name }}"
+    - name: Access Rule By Name
+      ansible.builtin.debug:
+        msg: "{{ access_rule_name }}"
 
    # - name: Policy Access Rule By ID
     #  zscaler.zpacloud.zpa_policy_access_rule_info:
