@@ -41,15 +41,15 @@
       ansible.builtin.debug:
         msg: "{{ profiles }}"
 
-  #  - name: Gather Details of a Specific CBI Profile by Name
-  #    zscaler.zpacloud.zpa_isolation_profile_info:
-  #      provider: "{{ zpa_cloud }}"
-  #      name: CBI_Profile01
-  #    register: profile_name
+    - name: Gather Details of a Specific CBI Profile by Name
+      zscaler.zpacloud.zpa_isolation_profile_info:
+        provider: "{{ zpa_cloud }}"
+        name: Default_Rule
+      register: profile_name
 
-  #  - name: Profile By Name
-  #    ansible.builtin.debug:
-  #      msg: "{{ profile_name }}"
+    - name: Profile By Name
+      ansible.builtin.debug:
+        msg: "{{ profile_name }}"
 
   #  - name: Gather Details of a Specific CBI Profileby ID
   #    zscaler.zpacloud.zpa_isolation_profile_info:
