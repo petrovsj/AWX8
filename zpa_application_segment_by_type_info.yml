@@ -42,15 +42,15 @@
       ansible.builtin.debug:
         msg: "{{ result }}"
 
-    - name: Gather Specific Browser Access Application Segment By Name
-      zscaler.zpacloud.zpa_application_segment_by_type_info:
-        name: BA_App_Segment_Name
-        application_type: BROWSER_ACCESS
-      register: ba01_result_name
+  #  - name: Gather Specific Browser Access Application Segment By Name
+  #    zscaler.zpacloud.zpa_application_segment_by_type_info:
+  #      name: BA_App_Segment_Name
+  #      application_type: BROWSER_ACCESS
+  #    register: ba01_result_name
 
-    - name: BA App Segment Details By Name
-      ansible.builtin.debug:
-        msg: "{{ ba01_result_name }}"
+  #  - name: BA App Segment Details By Name
+  #    ansible.builtin.debug:
+  #      msg: "{{ ba01_result_name }}"
 
     - name: Get details of a specific INSPECT application segment
       zscaler.zpacloud.zpa_application_segment_by_type_info:
@@ -62,15 +62,15 @@
       ansible.builtin.debug:
         msg: "{{ result }}"
 
-    - name: Gather Specific Inspect Application Segment By Name
-      zscaler.zpacloud.zpa_application_segment_by_type_info:
-        name: Inspect_App_Segment_Name
-        application_type: INSPECT
-      register: inspect01_result_name
+  #  - name: Gather Specific Inspect Application Segment By Name
+  #    zscaler.zpacloud.zpa_application_segment_by_type_info:
+  #      name: Inspect_App_Segment_Name
+  #      application_type: INSPECT
+  #    register: inspect01_result_name
 
-    - name: Inspect App Segment Details By Name
-      ansible.builtin.debug:
-        msg: "{{ inspect01_result_name }}"
+  #  - name: Inspect App Segment Details By Name
+  #    ansible.builtin.debug:
+  #      msg: "{{ inspect01_result_name }}"
 
     - name: Get details of a specific SECURE_REMOTE_ACCESS application segment
       zscaler.zpacloud.zpa_application_segment_by_type_info:
@@ -82,12 +82,12 @@
       ansible.builtin.debug:
         msg: "{{ result }}"
 
-    - name: Gather Specific PRA Application Segment By Name
-      zscaler.zpacloud.zpa_application_segment_by_type_info:
-        name: PRA_App_Segment_Name
-        application_type: SECURE_REMOTE_ACCESS
-      register: pra01_result_name
+  #  - name: Gather Specific PRA Application Segment By Name
+  #    zscaler.zpacloud.zpa_application_segment_by_type_info:
+  #      name: PRA_App_Segment_Name
+  #      application_type: SECURE_REMOTE_ACCESS
+  #    register: pra01_result_name
 
-    - name: PRA App Segment Details By Name
-      ansible.builtin.debug:
-        msg: "{{ pra01_result_name }}"
+  #  - name: PRA App Segment Details By Name
+  #    ansible.builtin.debug:
+  #      msg: "{{ pra01_result_name }}"
