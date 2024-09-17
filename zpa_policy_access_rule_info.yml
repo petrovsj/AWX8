@@ -54,7 +54,7 @@
     - name: Policy Access Rule By ID
       zscaler.zpacloud.zpa_policy_access_rule_info:
         provider: "{{ zpa_cloud }}"
-        id: "*"
+        id: "72058688180846655"
       register: access_rule_id
 
    # - name: Access Rule By ID
