@@ -57,6 +57,6 @@
         id: "72058688180846655"
       register: access_rule_id
 
-   # - name: Access Rule By ID
-    #  ansible.builtin.debug:
-     #   msg: "{{ access_rule_id }}"
+    - name: Access Rule By ID
+      ansible.builtin.debug:
+        msg: "{{ access_rule_id }}"
