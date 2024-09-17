@@ -51,11 +51,11 @@
       ansible.builtin.debug:
         msg: "{{ access_rule_name }}"
 
-   # - name: Policy Access Rule By ID
-    #  zscaler.zpacloud.zpa_policy_access_rule_info:
-     #   provider: "{{ zpa_cloud }}"
-      #  id: "216196257331282583"
-     # register: access_rule_id
+    - name: Policy Access Rule By ID
+      zscaler.zpacloud.zpa_policy_access_rule_info:
+        provider: "{{ zpa_cloud }}"
+        id: "*"
+      register: access_rule_id
 
    # - name: Access Rule By ID
     #  ansible.builtin.debug:
