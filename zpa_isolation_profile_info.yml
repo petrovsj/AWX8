@@ -44,7 +44,7 @@
     - name: Gather Details of a Specific CBI Profile by Name
       zscaler.zpacloud.zpa_isolation_profile_info:
         provider: "{{ zpa_cloud }}"
-        name: Default_Rule
+        name: TEST_ANSIBLE_ISOLATION_PROFILE
       register: profile_name
 
     - name: Profile By Name
