@@ -36,9 +36,9 @@
       zscaler.zpacloud.zpa_app_connector_group_info:
         provider: "{{ zpa_cloud }}"
 
-    - name: All App Connector Groups
-      ansible.builtin.debug:
-        msg: "{{ all_app_connectors }}"
+  #  - name: All App Connector Groups
+  #    ansible.builtin.debug:
+  #      msg: "{{ all_app_connectors }}"
 
   #  - name: Gather Details of a Specific App Connector Groups by Name
   #    zscaler.zpacloud.zpa_app_connector_group_info:
