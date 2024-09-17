@@ -55,6 +55,6 @@
  #       id: "12345678910"
  #     register: ba01_result_id
 
-    - name: BA App Segment Details By ID
-      ansible.builtin.debug:
-        msg: "{{ ba01_result_id }}"
+ #   - name: BA App Segment Details By ID
+ #     ansible.builtin.debug:
+ #       msg: "{{ ba01_result_id }}"
