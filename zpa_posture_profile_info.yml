@@ -41,22 +41,22 @@
       ansible.builtin.debug:
         msg: "{{ posture_profiles }}"
 
-  #  - name: Gather Details of a Specific Posture Profile by Name
-  #    zscaler.zpacloud.zpa_posture_profile_info:
-  #      provider: "{{ zpa_cloud }}"
-  #      name: CrowdStrike_ZPA_ZTA_40
-  #    register: posture_profile_name
+    - name: Gather Details of a Specific Posture Profile by Name
+      zscaler.zpacloud.zpa_posture_profile_info:
+        provider: "{{ zpa_cloud }}"
+        name: ZCC4.4 Posture Check (zscalerbeta.net)
+      register: posture_profile_name
 
-  #  - name: Posture Profile By Name
-  #    ansible.builtin.debug:
-  #      msg: "{{ posture_profile_name }}"
+    - name: Posture Profile By Name
+      ansible.builtin.debug:
+        msg: "{{ posture_profile_name }}"
 
-  #  - name: Gather Details of a Specific Posture Profile by ID
-  #    zscaler.zpacloud.zpa_posture_profile_info:
-  #      provider: "{{ zpa_cloud }}"
-  #      id: "216196257331282583"
-  #    register: posture_profile_id
+    - name: Gather Details of a Specific Posture Profile by ID
+      zscaler.zpacloud.zpa_posture_profile_info:
+        provider: "{{ zpa_cloud }}"
+        id: "72058688180846637"
+      register: posture_profile_id
 
-  #  - name: Posture Profile By ID
-  #    ansible.builtin.debug:
-  #      msg: "{{ posture_profile_id }}"
+    - name: Posture Profile By ID
+      ansible.builtin.debug:
+        msg: "{{ posture_profile_id }}"
