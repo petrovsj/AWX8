@@ -54,7 +54,7 @@
     - name: Gather Details of a Specific CBI Profileby ID
       zscaler.zpacloud.zpa_isolation_profile_info:
         provider: "{{ zpa_cloud }}"
-        id: "27ae7d49-5d86-4853-89ac-9ad94f1aa2f4"
+        id: "72058688180846659"
       register: profile_id
 
     - name: CBI Profile By ID
