@@ -42,23 +42,23 @@
       ansible.builtin.debug:
         msg: "{{ all_app_servers }}"
 
- #   - name: Gather Information Details of an Application Server by Name
- #     zscaler.zpacloud.zpa_application_server_info:
- #       provider: "{{ zpa_cloud }}"
- #       name: server1.acme.com
- #     register: app_server_name
+ ##   - name: Gather Information Details of an Application Server by Name
+ ##     zscaler.zpacloud.zpa_application_server_info:
+ ##       provider: "{{ zpa_cloud }}"
+ ##       name: server1.acme.com
+ ##     register: app_server_name
 
- #   - name: App Segment Details By Name
- #     ansible.builtin.debug:
- #       msg: "{{ app_server_name }}"
+ ##   - name: App Segment Details By Name
+ ##     ansible.builtin.debug:
+ ##       msg: "{{ app_server_name }}"
 
- #   # Gather Application Server by ID
- #   - name: Gather Information Details of an Application Server by ID
- #     zscaler.zpacloud.zpa_application_server_info:
- #       provider: "{{ zpa_cloud }}"
- #       id: "216196257331291921"
- #     register: app_server_id
+ ##   # Gather Application Server by ID
+ ##   - name: Gather Information Details of an Application Server by ID
+ ##     zscaler.zpacloud.zpa_application_server_info:
+ ##       provider: "{{ zpa_cloud }}"
+ ##       id: "216196257331291921"
+ ##     register: app_server_id
 
- #   - name: App Segment Details By ID
- #     ansible.builtin.debug:
- #       msg: "{{ app_server_id }}"
+ ##   - name: App Segment Details By ID
+ ##     ansible.builtin.debug:
+ ##       msg: "{{ app_server_id }}"
