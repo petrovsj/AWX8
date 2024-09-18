@@ -45,23 +45,23 @@
         msg: "{{ trusted_networks }}"
 
     # Gather Specific Trusted Network Info By Name
-    - name: Gather Details of a Specific Trusted Network by Name
-      zscaler.zpacloud.zpa_trusted_networks_info:
-        provider: "{{ zpa_cloud }}"
-        name: Corp-Trusted-Networks
-      register: trusted_network_name
+#    - name: Gather Details of a Specific Trusted Network by Name
+#      zscaler.zpacloud.zpa_trusted_networks_info:
+#        provider: "{{ zpa_cloud }}"
+#        name: Corp-Trusted-Networks
+#      register: trusted_network_name
 
-    - name: Trusted Networks by Name
-      ansible.builtin.debug:
-        msg: "{{ trusted_network_name }}"
+#    - name: Trusted Networks by Name
+#      ansible.builtin.debug:
+#        msg: "{{ trusted_network_name }}"
 
     # Gather Specific Trusted Network Info By ID
-    - name: Gather Details of a Specific Trusted Network by ID
-      zscaler.zpacloud.zpa_trusted_networks_info:
-        provider: "{{ zpa_cloud }}"
-        id: "216196257331282583"
-      register: trusted_network_id
+#    - name: Gather Details of a Specific Trusted Network by ID
+#      zscaler.zpacloud.zpa_trusted_networks_info:
+#        provider: "{{ zpa_cloud }}"
+#        id: "216196257331282583"
+#      register: trusted_network_id
 
-    - name: Trusted Network by ID
-      ansible.builtin.debug:
-        msg: "{{ trusted_network_id }}"
+#    - name: Trusted Network by ID
+#      ansible.builtin.debug:
+#        msg: "{{ trusted_network_id }}"
