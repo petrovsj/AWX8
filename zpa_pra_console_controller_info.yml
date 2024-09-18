@@ -41,22 +41,22 @@
       ansible.builtin.debug:
         msg: "{{ pra_consoles }}"
 
-    - name: Gather Details of a Specific PRA Consoles by Name
-      zscaler.zpacloud.zpa_pra_console_controller_info:
-        provider: "{{ zpa_cloud }}"
-        name: PRA_Console01
-      register: console_name
+ #   - name: Gather Details of a Specific PRA Consoles by Name
+ #     zscaler.zpacloud.zpa_pra_console_controller_info:
+ #       provider: "{{ zpa_cloud }}"
+ #       name: PRA_Console01
+ #     register: console_name
 
-    - name: PRA Console By Name
-      ansible.builtin.debug:
-        msg: "{{ console_name }}"
+ #   - name: PRA Console By Name
+ #     ansible.builtin.debug:
+ #       msg: "{{ console_name }}"
 
-    - name: Gather Details of a Specific PRA Consoleby ID
-      zscaler.zpacloud.zpa_pra_console_controller_info:
-        provider: "{{ zpa_cloud }}"
-        id: "216196257331282583"
-      register: console_id
+ #   - name: Gather Details of a Specific PRA Consoleby ID
+ #     zscaler.zpacloud.zpa_pra_console_controller_info:
+ #       provider: "{{ zpa_cloud }}"
+ #       id: "216196257331282583"
+ #     register: console_id
 
-    - name: PRA Console By ID
-      ansible.builtin.debug:
-        msg: "{{ console_id }}"
+ #   - name: PRA Console By ID
+ #     ansible.builtin.debug:
+ #       msg: "{{ console_id }}"
