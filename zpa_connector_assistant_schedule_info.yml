@@ -41,22 +41,22 @@
       ansible.builtin.debug:
         msg: "{{ result }}"
 
- #   - name: Gather Details of Assistant Schedules by ID
- #     zscaler.zpacloud.zpa_connector_assistant_schedule_info:
- #       provider: "{{ zpa_cloud }}"
- #       id: '1'
- #     register: result
+    - name: Gather Details of Assistant Schedules by ID
+      zscaler.zpacloud.zpa_connector_assistant_schedule_info:
+        provider: "{{ zpa_cloud }}"
+        id: '1'
+      register: result
 
- #   - name: Schedule by ID
- #     ansible.builtin.debug:
- #       msg: "{{ result }}"
+    - name: Schedule by ID
+      ansible.builtin.debug:
+        msg: "{{ result }}"
 
- #   - name: Gather Details of Assistant Schedules by Customer ID
- #     zscaler.zpacloud.zpa_connector_assistant_schedule_info:
- #       provider: "{{ zpa_cloud }}"
- #       customer_id: "1234455678990"
- #     register: result
+    - name: Gather Details of Assistant Schedules by Customer ID
+      zscaler.zpacloud.zpa_connector_assistant_schedule_info:
+        provider: "{{ zpa_cloud }}"
+        customer_id: "1234455678990"
+      register: result
 
- #   - name: Schedule by Customer ID
- #     ansible.builtin.debug:
- #       msg: "{{ result }}"
+    - name: Schedule by Customer ID
+      ansible.builtin.debug:
+        msg: "{{ result }}"
