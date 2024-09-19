@@ -37,13 +37,13 @@
         provider: "{{ zpa_cloud }}"
       register: all_app_connectors_result  # Register the result of the task
   
-    - name: Debug All App Connector Groups
+    - name: Debug the entire result
       ansible.builtin.debug:
-        msg: "{{ all_app_connectors_result }}"  # Use the registered variable
+        var: all_app_connectors_result  # Debug the full result so you can inspect it
   
     - name: Display specific details from App Connector Groups
       ansible.builtin.debug:
-        msg: "{{ all_app_connectors_result.app_connector_groups }}"  # Display the app connector groups
+        msg: "{{ all_app_connectors_result.some_correct_path }}"  # Adjust based on the debug output
 
     - name: Gather Details of a Specific App Connector Groups by Name
       zscaler.zpacloud.zpa_app_connector_group_info:
