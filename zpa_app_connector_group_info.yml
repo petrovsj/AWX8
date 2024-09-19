@@ -43,7 +43,7 @@
   
     - name: Display specific details from App Connector Groups
       ansible.builtin.debug:
-        msg: "{{ all_app_connectors_result.some_correct_path }}"  # Adjust based on the debug output
+        msg: "{{ all_app_connectors_result. }}"  # Adjust based on the debug output
 
     - name: Gather Details of a Specific App Connector Groups by Name
       zscaler.zpacloud.zpa_app_connector_group_info:
