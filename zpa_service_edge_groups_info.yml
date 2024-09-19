@@ -36,11 +36,11 @@
     - name: Gather Detail Information of All Service Edge Groups
       zscaler.zpacloud.zpa_service_edge_groups:
         provider: "{{ zpa_cloud }}"
-      register: service_edge_groups
+      register: zpa_service_edge_groups
 
     - name: All Service Edge Groups
       ansible.builtin.debug:
-        msg: "{{ service_edge_groups }}"
+        msg: "{{ zpa_service_edge_groups }}"
 
     - name: Gather Details of All Service Edge Groups by Name
       zscaler.zpacloud.zpa_service_edge_groups:
