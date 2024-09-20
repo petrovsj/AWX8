@@ -92,7 +92,7 @@
     - name: Gather Details of All Service Edge Group Provisioning Keys by Name
       zscaler.zpacloud.zpa_provisioning_key_info:
         provider: "{{ zpa_cloud }}"
-        name: Example Service Edge Group
+        name: PDC SE Provisioning keys
         key_type: service_edge
       register: edge_grp_key_name
 
@@ -103,7 +103,7 @@
     - name: Gather Details of All Service Edge Group Provisioning Keys by ID
       zscaler.zpacloud.zpa_provisioning_key_info:
         provider: "{{ zpa_cloud }}"
-        id: "8691"
+        id: "4901"
         key_type: service_edge
       register: edge_grp_key_id
 
