@@ -13,7 +13,7 @@
     - name: Gather Details of Service Edge Groups (All)
       zscaler.zpacloud.zpa_service_edge_groups:
         provider: "{{ zpa_cloud }}"
-        name: ""
+        name: "PDC Service Edge Group"
       register: zpa_service_edge_groups
 
     - name: Display All Service Edge Groups
