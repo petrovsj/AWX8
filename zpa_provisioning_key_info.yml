@@ -70,6 +70,13 @@
 - name: Gather Service Edge Provisioning Key Details
   hosts: localhost
   connection: local
+ 
+  vars:
+    zpa_cloud:
+      client_id: "{{ client_id }}"
+      client_secret: "{{ client_secret | default(omit) }}"
+      customer_id: "{{ customer_id | default(omit) }}"
+      cloud: "{{ cloud | default(omit) }}"
 
   tasks:
     - name: Gather Details of All Service Edge Group Provisioning Keys
