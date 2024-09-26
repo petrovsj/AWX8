@@ -149,3 +149,23 @@
 
 
 
+    - name: Gather Details of All Connector Group Provisioning Keys
+      zscaler.zpacloud.zpa_provisioning_key_info:
+        provider: "{{ zpa_cloud }}"
+        key_type: connector
+      register: all_connector_grp_keys
+
+    - name: All Connector Group Provisioning Keys
+      ansible.builtin.debug:
+        msg: "{{ all_connector_grp_keys }}"
+
+
+    - name: Gather Details of All Service Edge Group Provisioning Keys
+      zscaler.zpacloud.zpa_provisioning_key_info:
+        provider: "{{ zpa_cloud }}"
+        key_type: service_edge
+      register: all_edge_grp_key_name
+
+    - name: All Service Edge Group
+      ansible.builtin.debug:
+        msg: "{{ all_edge_grp_key_name }}"     
