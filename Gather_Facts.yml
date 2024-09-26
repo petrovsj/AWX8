@@ -168,4 +168,38 @@
 
     - name: All Service Edge Group
       ansible.builtin.debug:
-        msg: "{{ all_edge_grp_key_name }}"     
+        msg: "{{ all_edge_grp_key_name }}" 
+
+    
+    - name: Gather Detail Information of All Segment Groups
+      zscaler.zpacloud.zpa_segment_group_info:
+        provider: "{{ zpa_cloud }}"
+      register: segment_groups
+
+    - name: All Segment Groups
+      ansible.builtin.debug:
+        msg: "{{ segment_groups }}"
+
+     
+    - name: Gather Details of All Server Groups
+      zscaler.zpacloud.zpa_server_group_info:
+        provider: "{{ zpa_cloud }}"
+      register: server_groups
+
+    - name: All Server Groups
+      ansible.builtin.debug:
+        msg: "{{ server_groups }}"
+
+
+    # Gather all Trusted Network Info
+    - name: Gather Details of All Trusted Networks
+      zscaler.zpacloud.zpa_trusted_networks_info:
+        provider: "{{ zpa_cloud }}"
+      register: trusted_networks
+
+    - name: All Trusted Networks
+      ansible.builtin.debug:
+        msg: "{{ trusted_networks }}"
+
+        
+                          
