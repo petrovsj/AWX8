@@ -66,19 +66,17 @@
       ansible.builtin.debug:
         msg: "{{ all_app_segments }}"     
              
-    ##########################################################
+    
     # zpa_service_edge_groups_info.yml
-    # This task works only if a Service Edge Group is specified by name
-    - name: Gather Details of All Service Edge Groups by Name
-      zscaler.zpacloud.zpa_service_edge_groups:
+    - name: Gather Detail Information of All Service Edge Groups
+      zscaler.zpacloud.zpa_service_edge_groups_info:
         provider: "{{ zpa_cloud }}"
-        name: PDC Service Edge Group
-      register: service_edge_group_name
+      register: service_edge_groups
 
-    - name: Service Edge Groups by Name
+    - name: All Service Edge Groups
       ansible.builtin.debug:
-        msg: "{{ service_edge_group_name }}"    
-    #########################################################
+        msg: "{{ service_edge_groups }}"
+    
    
     # zpa_application_server_info.yml
     - name: Gather Information Details of All Application Servers
